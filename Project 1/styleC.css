@@ -1,0 +1,41 @@
+@keyframes slideRotate {
+  0% {
+    opacity: 0;
+    transform: translateX(100px) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.block{
+  background-image: linear-gradient(to right bottom, rgba(238, 10, 238, 0.7), rgba(7, 218, 165, 0.9));
+}
+
+.box {
+  animation-name: slideRotate;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: all .7s;
+  font-family: 'Indie Flower', cursive;
+}
+
+.box:hover {
+  animation: bounce 0.5s ease-in-out;
+  color: hsl(0, 100%, 50%);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.884);
+}
+
+
+
